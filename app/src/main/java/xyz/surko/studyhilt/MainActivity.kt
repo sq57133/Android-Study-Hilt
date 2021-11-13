@@ -15,6 +15,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // 会输出 AnalyticsServiceImpl 中的 你好啊 三个字，因为 AnalyticsModule.bindAnalyticsService()
+        // 中告知了 hilt 要提供 Impl 的实现
         analyticsService.analyticsMethods()
     }
 }
